@@ -1,0 +1,164 @@
+html, body {
+	margin: 0;
+	padding: 0;
+
+}
+
+.formWrapper {
+	position: relative;
+	max-width: 1110px;
+	margin: 0 auto;
+	background-color: rgb(245, 245, 245);
+	min-height: 100vh;
+
+	.twitterM {
+		position: absolute;
+		left: 7%;
+		top: 57%;
+		width: 9%;
+		transform: rotate(20deg);
+		opacity: 65%;
+
+	}
+
+	.twitterL {
+		position: absolute;
+		right: 5%;
+		top: 64%;
+		width: 12%;
+		transform: rotate(20deg);
+		opacity: 65%;
+	}
+
+	.twitterS {
+		position: absolute;
+		right: 35%;
+		top: 80%;
+		width: 7%;
+		transform: rotate(20deg);
+	}
+
+
+	.form {
+		position: relative;
+		max-width: 79.28%;
+		min-height: 48.2%;
+		z-index: 2;
+		top: 20vh;
+		left: 11%;
+		border: 1px solid rgb(206, 206, 206);
+		background-color: rgb(245, 245, 245);
+		border-radius: 1rem;
+		outline: none;
+
+		.formHeader {
+			max-width: 100%;
+			padding: 4%;
+			background-color: rgba(52, 183, 206, .65);
+			border-top-right-radius: 1rem;
+			border-top-left-radius: 1rem;
+			outline: none;
+			margin-bottom: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.headerTitle {
+				align-self: center;
+			margin: 0 auto;
+				font-weight: bold;
+				font-size: 2vw;
+
+			}
+			@media screen and (max-width: 800px) {
+				.headerTitle {
+					font-size: 2.5vw;
+				}
+			}
+			@media screen and (max-width: 500px) {
+				.headerTitle {
+					font-size: 3vw;
+				}
+			}
+			@media screen and (min-width: 1200px) {
+				.headerTitle {
+					font-size: 1.7vw;
+				}
+			}
+
+
+			.note {
+display: inline-block;
+				width: 2.5rem;
+				height: 2.5rem;
+				background-color: rgb(37,156,177);
+				border-radius: 50%;
+				line-height: 3rem;  /* подробнее про line-height */
+				text-align: center;  /* выравнять текст по середине по горизонтали */
+				img {
+					width: 50%;
+				}
+			}
+		}
+
+
+		.formContent {
+			max-height: 83%;
+			display: flex;
+			justify-content: stretch;
+			flex-wrap: wrap;
+
+			.formContentLeft {
+				display: inline-block;
+				width: 49.9%;
+				text-align: center;
+
+				.round {
+					position: relative;
+					text-align: center;
+					.roundLine {
+
+						position: absolute;
+						left: 6%;
+						width: 87%;
+						border: 1px solid rgba(206, 206, 206, .5);
+						top: 38%;
+					}
+
+					.ringW {
+						position: relative;
+						z-index: 2;
+						margin: 1rem auto;
+						padding: 5px;
+						color: rgb(170, 170, 170);
+						width: 1rem;
+						height: 1rem;
+						border: 2px solid rgb(206, 206, 206);
+						border-radius: 50%;
+						line-height: 1rem;
+						text-align: center;
+						background: rgb(206, 206, 206);
+					}
+				}
+			}
+
+			.formContentRight {
+
+				display: inline-block;
+				width: 49.9%;
+				text-align: center;
+
+				.reg {
+					margin-bottom: 1rem;
+					text-align: left;
+					padding-left: 5%;
+				}
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.formContent {
+				font-size: 85%;
+			}
+		}
+	}
+}
+

@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import s from './App.module.scss';
+import LoginReduxForm from "./Components/Form/LoginReduxForm";
+import LoginRegisterForm from "./Components/Form/LoginRegisterForm";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export const App = ()=>{
+
+	const [logData, setLogData] = useState(null);
+	const [regData, setRegData] = useState(null);
+	console.log(logData);
+	console.log(regData);
+
+	const onSubmit = (data) => {
+		setLogData(data)
+	};
+	const submitRegData = (data) => {
+		setRegData(data)
+	};
+
+
+	return (
+		<>
+			<div className={s.formWrapper}>
+				<img className={s.twitterM} src={'/icons/twitter.ico'} alt=""/>
+				<img className={s.twitterL} src={'/icons/twitter.ico'} alt=""/>
+				<img className={s.twitterS} src={'/icons/twitter.ico'} alt=""/>
+				<div className={s.form}>
+					<div className={s.formHeader}>
+						<div className={s.note}><img src={'/icons/note.ico'} alt=""/></div>
+						<div className={s.headerTitle}>Login To Your Account / Register New</div>
+					</div>
+					<div className={s.formContent}>
+						<div className={s.formContentLeft}>
+							<div className={s.round}>
+								<span className={s.roundLine}> </span>
+								<div className={s.ringW}>/</div>
+							</div>
+							<LoginReduxForm onSubmit={onSubmit}/>
+						</div>
+						<div className={s.formContentRight}>
+							<div className={s.reg}>Register</div>
+							<LoginRegisterForm submitRegData={submitRegData}/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
+};
+
+

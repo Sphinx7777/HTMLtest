@@ -1,0 +1,220 @@
+.login {
+
+
+	text-align: center;
+
+
+	.loginEmail, .loginPass, .loginName {
+		position: relative;
+		text-align: left;
+
+
+		.inputField {
+			margin: 2% auto 10%;
+			width: 80%;
+			max-height: 2.8rem;
+			display: block;
+			border-radius: 0.5rem;
+			outline: none;
+			padding: 2.9% 2.9% 2.9% 7%;
+			font-weight: bold;
+
+		}
+
+		@media screen and (max-width: 750px) {
+			.inputField {
+				margin: 5% auto 15%;
+			}
+		}
+		@media screen and (max-width: 650px) {
+			.inputField {
+				margin: 10% auto 20%;
+			}
+		}
+		@media screen and (max-width: 500px) {
+			.inputField {
+				margin: 10% auto 22%;
+			}
+		}
+		@media screen and (max-width: 350px) {
+			.inputField {
+				margin: 15% auto 30%;
+			}
+		}
+
+
+		input[type="password"]::placeholder {
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		input[type="password"].errorInputField::placeholder {
+			color: rgba(255, 0, 0, 0.3);
+		}
+
+		input[type="email"]::placeholder {
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		input[type="email"].errorInputField::placeholder {
+			color: rgba(255, 0, 0, 0.3);
+		}
+
+		input[type="text"]::placeholder {
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		input[type="text"].errorInputField::placeholder {
+			color: rgba(255, 0, 0, 0.3);
+		}
+
+		.inputLabel {
+			display: inline-block;
+
+			padding-left: 5%;
+			font-size: 0.8rem;
+
+		}
+
+		.inputLabel.errorInputLabel {
+			color: red;
+			display: inline-block;
+
+
+		}
+
+		.inputField.errorInputField {
+			border: 1px solid red;
+
+		}
+
+		.inputError {
+			position: absolute;
+			text-align: center;
+			background-color: transparent;
+			font-weight: normal;
+			font-size: 0.8rem;
+			width: 70%;
+			color: red;
+			padding: 1px 2%;
+
+
+			bottom: 50%;
+			left: 13%;
+
+
+		}
+
+	}
+
+	.loginCheck {
+
+
+		display: flex;
+		align-items: center;
+		font-size: 0.7rem;
+		margin: 0 auto;
+		align-content: center;
+		flex-wrap: wrap;
+		max-width: 88%;
+		justify-content: space-between;
+
+		.loginBtn {
+			cursor: pointer;
+			border-radius: 0.5rem;
+			outline: none;
+			border: none;
+			padding: 2% 8%;
+			margin-left: 0.2rem;
+			align-self: end;
+			height: 100%;
+			color: white;
+			background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
+
+		}
+
+
+		.inputField[type=checkbox] {
+			zoom: 1.7;
+			display: inline-block;
+			cursor: pointer;
+			padding: 0.5rem;
+			margin-right: 0.3rem;
+		}
+
+
+		.check {
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			.checkPass {
+
+			}
+
+			.checkTitle {
+				width: 11.5rem;
+				text-align: left;
+				background-color: white;
+				padding: 1rem;
+				border-radius: 0.5rem;
+				outline: none;
+				color: rgba(0, 0, 0, 0.4);
+				position: absolute;
+				top: 200%;
+				right: 2%;
+				opacity: 0;
+			}
+		}
+
+		.checkPass:hover ~ .checkTitle {
+			opacity: 100;
+		}
+	}
+
+	@media screen and (max-width: 515px) {
+		.loginCheck {
+
+
+			.loginBtn {
+				margin: 0 0 0 60%;
+
+			}
+		}
+	}
+
+
+	.loginRegistrBtns {
+		text-align: right;
+		max-width: 94%;
+
+		.loginRegistrBtn {
+			color: white;
+			cursor: pointer;
+			border-radius: 0.5rem;
+			outline: none;
+			border: none;
+			padding: 2% 8%;
+			margin-left: 0.2rem;
+			align-self: end;
+			margin-bottom: 2rem;
+			background: radial-gradient(circle farthest-corner at bottom right, rgb(255, 180, 0), rgb(170, 120, 0));
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
