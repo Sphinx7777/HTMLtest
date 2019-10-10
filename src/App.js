@@ -25,6 +25,13 @@ export const App = ()=>{
 				<img className={s.twitterM} src={'/icons/twitter.ico'} alt=""/>
 				<img className={s.twitterL} src={'/icons/twitter.ico'} alt=""/>
 				<img className={s.twitterS} src={'/icons/twitter.ico'} alt=""/>
+				<img className={s.faceBookS} src={'/icons/facebook.ico'} alt=""/>
+				<img className={s.faceBookM} src={'/icons/facebook.ico'} alt=""/>
+				<img className={s.telegram} src={'/icons/telegram.ico'} alt=""/>
+				<img className={s.instagram} src={'/icons/instagram.ico'} alt=""/>
+				<img className={s.linkedin} src={'/icons/linkedin.ico'} alt=""/>
+				<img className={s.youtube} src={'/icons/youtube.ico'} alt=""/>
+				<div className={s.headerTitleBac}>Login To Your Account / Register New</div>
 				<div className={s.form}>
 					<div className={s.formHeader}>
 						<div className={s.note}><img src={'/icons/note.ico'} alt=""/></div>

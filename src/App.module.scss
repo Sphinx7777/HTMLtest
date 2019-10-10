@@ -1,7 +1,22 @@
+@mixin mediaMax($width,$size) {
+	@media screen and (max-width: $width) {
+		.headerTitleBac {
+			font-size: $size;
+		}
+	}
+}
+@mixin mediaMin($width,$size) {
+	@media screen and (max-width: $width) {
+		.headerTitleBac {
+			font-size: $size;
+		}
+	}
+}
+
+
 html, body {
 	margin: 0;
 	padding: 0;
-
 }
 
 .formWrapper {
@@ -9,33 +24,86 @@ html, body {
 	max-width: 1110px;
 	margin: 0 auto;
 	background-color: rgb(245, 245, 245);
-	min-height: 100vh;
+	height: 1200px;
+
+	.twitterM,.twitterL,.twitterS,.faceBookS,
+	.faceBookM,.telegram,.instagram,.linkedin,
+	.youtube,.headerTitleBac,.roundLine {
+		position: absolute;
+	}
 
 	.twitterM {
-		position: absolute;
 		left: 7%;
 		top: 57%;
 		width: 9%;
 		transform: rotate(20deg);
-		opacity: 65%;
-
 	}
 
 	.twitterL {
-		position: absolute;
 		right: 5%;
 		top: 64%;
 		width: 12%;
 		transform: rotate(20deg);
-		opacity: 65%;
 	}
 
 	.twitterS {
-		position: absolute;
 		right: 35%;
 		top: 80%;
 		width: 7%;
 		transform: rotate(20deg);
+	}
+
+	.faceBookS {
+		right: 50%;
+		bottom: 22%;
+		width: 7%;
+
+	}
+
+	.faceBookM {
+		right: 1%;
+		top: 20%;
+		width: 12%;
+	}
+
+	.telegram {
+		left: 5%;
+		top: 7%;
+		width: 10%;
+	}
+
+	.instagram {
+		left: 30%;
+		top: 7%;
+		width: 5%;
+
+	}
+
+	.linkedin {
+		left: 10%;
+		bottom: 15%;
+		width: 7%;
+
+	}
+
+	.youtube {
+		right: 10%;
+		bottom: 12%;
+		width: 8%;
+		transform: rotate(-20deg);
+
+	}
+
+	.headerTitleBac {
+		display: inline-block;
+		right: 20%;
+		top: 13%;
+		font-size: 2vw;
+		font-weight: bold;
+		color: rgba(0, 0, 0, 0.3);
+		@include mediaMax(800px, 2.7vw);
+		@include mediaMax(500px, 3.2vw);
+		@include mediaMin(1200px, 1.8vw);
 	}
 
 
@@ -44,7 +112,7 @@ html, body {
 		max-width: 79.28%;
 		min-height: 48.2%;
 		z-index: 2;
-		top: 20vh;
+		top: 20%;
 		left: 11%;
 		border: 1px solid rgb(206, 206, 206);
 		background-color: rgb(245, 245, 245);
@@ -52,7 +120,9 @@ html, body {
 		outline: none;
 
 		.formHeader {
+			color: white;
 			max-width: 100%;
+			font-weight: bold;
 			padding: 4%;
 			background-color: rgba(52, 183, 206, .65);
 			border-top-right-radius: 1rem;
@@ -62,38 +132,26 @@ html, body {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
 			.headerTitle {
 				align-self: center;
-			margin: 0 auto;
+				margin: 0 auto;
 				font-weight: bold;
 				font-size: 2vw;
+				@include mediaMax(800px, 2.7vw);
+				@include mediaMax(500px, 3.2vw);
+				@include mediaMin(1200px, 1.8vw);
 
 			}
-			@media screen and (max-width: 800px) {
-				.headerTitle {
-					font-size: 2.5vw;
-				}
-			}
-			@media screen and (max-width: 500px) {
-				.headerTitle {
-					font-size: 3vw;
-				}
-			}
-			@media screen and (min-width: 1200px) {
-				.headerTitle {
-					font-size: 1.7vw;
-				}
-			}
-
 
 			.note {
-display: inline-block;
+				display: inline-block;
 				width: 2.5rem;
 				height: 2.5rem;
-				background-color: rgb(37,156,177);
+				background-color: rgb(37, 156, 177);
 				border-radius: 50%;
-				line-height: 3rem;  /* подробнее про line-height */
-				text-align: center;  /* выравнять текст по середине по горизонтали */
+				line-height: 3rem;
+				text-align: center;
 				img {
 					width: 50%;
 				}
@@ -115,9 +173,8 @@ display: inline-block;
 				.round {
 					position: relative;
 					text-align: center;
-					.roundLine {
 
-						position: absolute;
+					.roundLine {
 						left: 6%;
 						width: 87%;
 						border: 1px solid rgba(206, 206, 206, .5);
@@ -154,6 +211,7 @@ display: inline-block;
 				}
 			}
 		}
+
 		@media screen and (max-width: 500px) {
 			.formContent {
 				font-size: 85%;
