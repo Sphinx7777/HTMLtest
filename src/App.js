@@ -9,6 +9,7 @@ import instagram from "./icons/instagram.ico";
 import linkedin from "./icons/linkedin.ico";
 import youtube from "./icons/youtube.ico";
 import note from "./icons/twitter.ico";
+import lamp from "./icons/lamp.ico";
 
 
 export const App = ()=>{
@@ -38,6 +39,7 @@ export const App = ()=>{
 				<img className={s.instagram} src={instagram} alt=""/>
 				<img className={s.linkedin} src={linkedin} alt=""/>
 				<img className={s.youtube} src={youtube} alt=""/>
+				<img className={s.lamp} src={lamp} alt=""/>
 				<div className={s.headerTitleBac}>Login To Your Account / Register New</div>
 				<div className={s.form}>
 					<div className={s.formHeader}>
@@ -53,7 +55,7 @@ export const App = ()=>{
 							<LoginReduxForm onSubmit={onSubmit}/>
 						</div>
 						<div className={s.formContentRight}>
-							<div className={s.reg}>Register</div>
+							<div className={s.reg}><b>Register</b></div>
 							<LoginRegisterForm submitRegData={submitRegData}/>
 						</div>
 					</div>

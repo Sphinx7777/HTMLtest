@@ -1,6 +1,6 @@
-@mixin mediaMax($width,$size) {
-	@media screen and (max-width: $width) {
-		font-size: $size;
+@mixin Top($top) {
+	@media screen and (max-width: 450px) {
+		top: $top;
 	}
 }
 @mixin mediaMin($width,$size) {
@@ -8,7 +8,6 @@
 		font-size: $size;
 	}
 }
-
 
 html, body {
 	margin: 0;
@@ -24,7 +23,7 @@ html, body {
 
 	.twitterM,.twitterL,.twitterS,.faceBookS,
 	.faceBookM,.telegram,.instagram,.linkedin,
-	.youtube,.headerTitleBac,.roundLine {
+	.youtube,.headerTitleBac,.roundLine,.lamp {
 		position: absolute;
 	}
 
@@ -40,6 +39,7 @@ html, body {
 		top: 64%;
 		width: 12%;
 		transform: rotate(20deg);
+		@include Top(60%)
 	}
 
 	.twitterS {
@@ -47,13 +47,14 @@ html, body {
 		top: 80%;
 		width: 7%;
 		transform: rotate(20deg);
+		@include Top(65%)
 	}
 
 	.faceBookS {
 		right: 50%;
-		bottom: 22%;
+		top: 70%;
 		width: 7%;
-
+		@include Top(63%)
 	}
 
 	.faceBookM {
@@ -70,23 +71,28 @@ html, body {
 
 	.instagram {
 		left: 30%;
-		top: 7%;
-		width: 5%;
-
+		top: 2%;
+		width: 7%;
+	}
+	.lamp {
+		right: 12%;
+		top: 3%;
+		width: 7%;
 	}
 
 	.linkedin {
-		left: 10%;
-		bottom: 15%;
+		left: 15%;
+		top: 70%;
 		width: 7%;
-
+		@include Top(65%)
 	}
 
 	.youtube {
-		right: 10%;
-		bottom: 12%;
-		width: 8%;
+		right: 20%;
+		top: 70%;
+		width: 10%;
 		transform: rotate(-20deg);
+		@include Top(65%)
 
 	}
 
@@ -94,7 +100,7 @@ html, body {
 		display: inline-block;
 		right: 20%;
 		top: 13%;
-		font-size: 2vw;
+		font-size: 2.8vw;
 		font-weight: bold;
 		color: rgba(0, 0, 0, 0.3);
 		@include mediaMin(1200px,2vw);
@@ -136,7 +142,7 @@ html, body {
 				align-self: center;
 				margin: 0 auto;
 				font-weight: bold;
-				font-size: 2vw;
+				font-size: 2.8vw;
 			@include mediaMin(1200px,2vw);
 			@include mediaMin(1300px,1.8vw);
 			@include mediaMin(1400px,1.7vw);
@@ -213,6 +219,21 @@ html, body {
 				}
 			}
 		}
+		@media screen and (max-width: 450px) {
+			.formContent {
+				display: block;
+				width: 100%;
+
+				.formContentLeft {
+					display: block;
+					width: 100%;
+				}
+				.formContentRight {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
 
 		@media screen and (max-width: 500px) {
 			.formContent {
@@ -220,5 +241,12 @@ html, body {
 			}
 		}
 	}
+	@media screen and (max-width: 450px) {
+		.form {
+			top: 5%
+		}
+	}
 }
+
+
 

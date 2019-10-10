@@ -1,13 +1,15 @@
-@mixin marginLeft($width,$margin){
+@mixin marginLeft($width,$margin) {
 	@media screen and (max-width: $width) {
 		margin-left: $margin;
 	}
 }
-@mixin marginInput($width,$marginTop,$marginBottom){
+
+@mixin marginInput($width,$marginTop,$marginBottom) {
 	@media screen and (max-width: $width) {
 		margin: $marginTop auto $marginBottom;
 	}
 }
+
 $placeholderColor: rgba(0, 0, 0, 0.3);
 $placeholderColorError: rgba(255, 0, 0, 0.3);
 $shad: 0 1px 4px rgba(0, 0, 0, .3),
@@ -15,7 +17,7 @@ $shad: 0 1px 4px rgba(0, 0, 0, .3),
 23px 0 20px -23px rgba(0, 0, 0, .6),
 inset 0 0 40px rgba(0, 0, 0, .1);
 
-@mixin bRadius($br){
+@mixin bRadius($br) {
 	border-radius: $br;
 	outline: none;
 }
@@ -36,12 +38,19 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 			font-weight: bold;
 			border: 1px solid lawngreen;
 			@include bRadius(0.5rem);
-			@include marginInput(750px,5%,15%);
-			@include marginInput(650px,10%,20%);
-			@include marginInput(500px,12%,25%);
-			@include marginInput(350px,15%,30%);
-			&:focus{
+			@include marginInput(750px, 5%, 15%);
+			@include marginInput(650px, 10%, 20%);
+			@include marginInput(500px, 12%, 25%);
+
+			&:focus {
 				border: 1px solid lightblue;
+			}
+		}
+
+		@media screen and (max-width: 450px) {
+			.inputField {
+				width: 85%;
+				margin: 0.7rem auto 0.7rem;
 			}
 		}
 
@@ -108,7 +117,6 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 		justify-content: space-between;
 
 
-
 		.inputField[type=checkbox] {
 			zoom: 1.7;
 			display: inline-block;
@@ -139,11 +147,13 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 				opacity: 0;
 			}
 		}
+
 		.checkPass:hover ~ .checkTitle {
 			opacity: 100;
 		}
 
 	}
+
 	.loginRegistrBtns {
 		text-align: right;
 		max-width: 94%;
@@ -152,28 +162,41 @@ inset 0 0 40px rgba(0, 0, 0, .1);
 			color: white;
 			cursor: pointer;
 			@include bRadius(0.5rem);
-			border: 2px solid transparent ;
+			border: 2px solid transparent;
 
 			padding: 3% 10%;
 			align-self: end;
 			margin-bottom: 2rem;
 			font-weight: bold;
 			background: radial-gradient(circle farthest-corner at bottom right, rgb(255, 180, 0), rgb(170, 120, 0));
-			&:hover{
-				background: radial-gradient(circle farthest-corner at bottom right,rgb(170, 120, 0), rgb(255, 180, 0) );
+
+			&:hover {
+				background: radial-gradient(circle farthest-corner at bottom right, rgb(170, 120, 0), rgb(255, 180, 0));
 			}
-			&:active{
-				border: 2px solid gray ;
+
+			&:active {
+				border: 2px solid gray;
 
 
 			}
 		}
+
+		@media screen and (max-width: 450px) {
+
+			.loginRegistrBtn {
+				padding: 2% 5%;
+				margin-bottom: 1rem;
+				margin-top: 0.5rem;
+			}
+		}
 	}
 }
+
 .loginFormBtn {
-text-align: right;
+	text-align: right;
 	max-width: 95%;
 	margin-top: 12%;
+
 	.loginBtn {
 		cursor: pointer;
 		@include bRadius(0.5rem);
@@ -182,13 +205,26 @@ text-align: right;
 		color: white;
 		font-weight: bold;
 		background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
-		&:hover{
-			background: radial-gradient(circle farthest-corner at bottom right,rgb(0, 76, 108), rgb(79, 182, 226) );
+
+		&:hover {
+			background: radial-gradient(circle farthest-corner at bottom right, rgb(0, 76, 108), rgb(79, 182, 226));
 		}
-		&:active{
-			border: 2px solid gray ;
+
+		&:active {
+			border: 2px solid gray;
 		}
 	}
+}
+
+@media screen and (max-width: 450px) {
+	.loginFormBtn {
+		margin-top: 5%;
+
+		.loginBtn {
+			padding: 2% 5%;
+		}
+	}
+
 }
 
 
