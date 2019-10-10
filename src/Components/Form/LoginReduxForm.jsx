@@ -56,10 +56,14 @@ const LoginReduxForm = ({handleSubmit, submitting,error}) => {
 						</div>
 					</div>
 
-					<button className={s.loginBtn} type="submit" disabled={submitting}>Login</button>
+
 
 
 				</div>
+				<div className={s.loginFormBtn}>
+					<button className={s.loginBtn} type="submit" disabled={submitting}>Login</button>
+				</div>
+
 			{/*	{error && <span className={s.loginFormError}>{error}</span>}*/}
 
 			</form>

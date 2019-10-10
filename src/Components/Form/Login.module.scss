@@ -34,7 +34,7 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 			@include bRadius(0.5rem);
 			@include marginInput(750px,5%,15%);
 			@include marginInput(650px,10%,20%);
-			@include marginInput(500px,12%,22%);
+			@include marginInput(500px,12%,25%);
 			@include marginInput(350px,15%,30%);
 			&:focus{
 				border: 1px solid lightblue;
@@ -103,22 +103,7 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 		max-width: 88%;
 		justify-content: space-between;
 
-		.loginBtn {
-			cursor: pointer;
-			@include bRadius(0.5rem);
-			border: none;
-			padding: 3% 10%;
-			margin-left: 1%;
-			color: white;
-			font-weight: bold;
-			background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
-			@include marginLeft(732px,65%);
-			@include marginLeft(600px,55%);
-			@include marginLeft(458px,50%);
-			@media screen and (max-width: 458px) {
-				margin-top: 10%;
-			}
-		}
+
 
 		.inputField[type=checkbox] {
 			zoom: 1.7;
@@ -153,6 +138,7 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 		.checkPass:hover ~ .checkTitle {
 			opacity: 100;
 		}
+
 	}
 	.loginRegistrBtns {
 		text-align: right;
@@ -171,6 +157,28 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 		}
 	}
 }
+.loginFormBtn {
+text-align: right;
+	max-width: 95%;
+	margin-top: 12%;
+	.loginBtn {
+		cursor: pointer;
+		@include bRadius(0.5rem);
+		border: none;
+		padding: 3% 10%;
+
+		color: white;
+		font-weight: bold;
+		background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
+		/*@include marginLeft(732px,65%);
+		@include marginLeft(600px,55%);
+		@include marginLeft(458px,50%);
+		@media screen and (max-width: 600px) {
+			margin-top: 10%;
+		}*/
+	}
+}
+
 
 
 
