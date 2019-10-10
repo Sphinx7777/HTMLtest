@@ -10,6 +10,10 @@
 }
 $placeholderColor: rgba(0, 0, 0, 0.3);
 $placeholderColorError: rgba(255, 0, 0, 0.3);
+$shad: 0 1px 4px rgba(0, 0, 0, .3),
+-23px 0 20px -23px rgba(0, 0, 0, .6),
+23px 0 20px -23px rgba(0, 0, 0, .6),
+inset 0 0 40px rgba(0, 0, 0, .1);
 
 @mixin bRadius($br){
 	border-radius: $br;
@@ -148,12 +152,21 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 			color: white;
 			cursor: pointer;
 			@include bRadius(0.5rem);
-			border: none;
+			border: 2px solid transparent ;
+
 			padding: 3% 10%;
 			align-self: end;
 			margin-bottom: 2rem;
 			font-weight: bold;
 			background: radial-gradient(circle farthest-corner at bottom right, rgb(255, 180, 0), rgb(170, 120, 0));
+			&:hover{
+				background: radial-gradient(circle farthest-corner at bottom right,rgb(170, 120, 0), rgb(255, 180, 0) );
+			}
+			&:active{
+				border: 2px solid gray ;
+
+
+			}
 		}
 	}
 }
@@ -164,18 +177,17 @@ text-align: right;
 	.loginBtn {
 		cursor: pointer;
 		@include bRadius(0.5rem);
-		border: none;
 		padding: 3% 10%;
-
+		border: 2px solid transparent;
 		color: white;
 		font-weight: bold;
 		background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
-		/*@include marginLeft(732px,65%);
-		@include marginLeft(600px,55%);
-		@include marginLeft(458px,50%);
-		@media screen and (max-width: 600px) {
-			margin-top: 10%;
-		}*/
+		&:hover{
+			background: radial-gradient(circle farthest-corner at bottom right,rgb(0, 76, 108), rgb(79, 182, 226) );
+		}
+		&:active{
+			border: 2px solid gray ;
+		}
 	}
 }
 
