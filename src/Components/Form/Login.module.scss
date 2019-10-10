@@ -1,17 +1,27 @@
+@mixin marginLeft($width,$margin){
+	@media screen and (max-width: $width) {
+		margin-left: $margin;
+	}
+}
+@mixin marginInput($width,$marginTop,$marginBottom){
+	@media screen and (max-width: $width) {
+		margin: $marginTop auto $marginBottom;
+	}
+}
+$placeholderColor: rgba(0, 0, 0, 0.3);
+$placeholderColorError: rgba(255, 0, 0, 0.3);
+
 @mixin bRadius($br){
 	border-radius: $br;
 	outline: none;
 }
 
-
 .login {
 	text-align: center;
-
 
 	.loginEmail, .loginPass, .loginName {
 		position: relative;
 		text-align: left;
-
 
 		.inputField {
 			margin: 2% auto 10%;
@@ -20,54 +30,39 @@
 			display: block;
 			padding: 2.9% 2.9% 2.9% 7%;
 			font-weight: bold;
+			border: 1px solid lawngreen;
 			@include bRadius(0.5rem);
-
-		}
-
-		@media screen and (max-width: 750px) {
-			.inputField {
-				margin: 5% auto 15%;
+			@include marginInput(750px,5%,15%);
+			@include marginInput(650px,10%,20%);
+			@include marginInput(500px,12%,22%);
+			@include marginInput(350px,15%,30%);
+			&:focus{
+				border: 1px solid lightblue;
 			}
 		}
-		@media screen and (max-width: 650px) {
-			.inputField {
-				margin: 10% auto 20%;
-			}
-		}
-		@media screen and (max-width: 500px) {
-			.inputField {
-				margin: 10% auto 22%;
-			}
-		}
-		@media screen and (max-width: 350px) {
-			.inputField {
-				margin: 15% auto 30%;
-			}
-		}
-
 
 		input[type="password"]::placeholder {
-			color: rgba(0, 0, 0, 0.3);
+			color: $placeholderColor;
 		}
 
 		input[type="password"].errorInputField::placeholder {
-			color: rgba(255, 0, 0, 0.3);
+			color: $placeholderColorError;
 		}
 
 		input[type="email"]::placeholder {
-			color: rgba(0, 0, 0, 0.3);
+			color: $placeholderColor;
 		}
 
 		input[type="email"].errorInputField::placeholder {
-			color: rgba(255, 0, 0, 0.3);
+			color: $placeholderColorError;
 		}
 
 		input[type="text"]::placeholder {
-			color: rgba(0, 0, 0, 0.3);
+			color: $placeholderColor;
 		}
 
 		input[type="text"].errorInputField::placeholder {
-			color: rgba(255, 0, 0, 0.3);
+			color: $placeholderColorError;
 		}
 
 		.inputLabel {
@@ -103,7 +98,6 @@
 	.loginCheck {
 		display: flex;
 		align-items: center;
-		font-size: 0.7rem;
 		margin: 0 auto;
 		flex-wrap: wrap;
 		max-width: 88%;
@@ -113,15 +107,18 @@
 			cursor: pointer;
 			@include bRadius(0.5rem);
 			border: none;
-			padding: 0.7rem 2.5rem;
-			height: 100%;
+			padding: 3% 10%;
+			margin-left: 1%;
 			color: white;
-			font-size: 1rem;
 			font-weight: bold;
-			display: inline-block;
 			background: radial-gradient(circle farthest-corner at bottom right, rgb(79, 182, 226), rgb(0, 76, 108));
+			@include marginLeft(732px,65%);
+			@include marginLeft(600px,55%);
+			@include marginLeft(458px,50%);
+			@media screen and (max-width: 458px) {
+				margin-top: 10%;
+			}
 		}
-
 
 		.inputField[type=checkbox] {
 			zoom: 1.7;
@@ -131,18 +128,18 @@
 			margin-right: 0.3rem;
 		}
 
-
 		.check {
 			display: flex;
 			align-items: center;
 			position: relative;
 
 			.checkPass {
-
+				font-size: 0.7rem;
+				padding-bottom: 2px;
 			}
 
 			.checkTitle {
-				width: 11.5rem;
+				width: 10rem;
 				text-align: left;
 				background-color: white;
 				padding: 1rem;
@@ -150,45 +147,13 @@
 				color: rgba(0, 0, 0, 0.4);
 				position: absolute;
 				top: 120%;
-				right: 2%;
 				opacity: 0;
 			}
 		}
-
 		.checkPass:hover ~ .checkTitle {
 			opacity: 100;
 		}
 	}
-
-	@media screen and (max-width: 780px) {
-		.loginCheck {
-
-
-			.loginBtn {
-				margin:10% 0 0 60%;
-
-			}
-		}
-	}
-	@media screen and (max-width: 500px) {
-		.loginCheck {
-
-			.check {
-
-				.checkTitle {
-					right: -50%;
-				}
-			}
-
-			.loginBtn {
-				margin:10% 0 0 50%;
-
-			}
-		}
-	}
-
-
-
 	.loginRegistrBtns {
 		text-align: right;
 		max-width: 94%;
@@ -198,14 +163,13 @@
 			cursor: pointer;
 			@include bRadius(0.5rem);
 			border: none;
-			padding: 3% 8%;
+			padding: 3% 10%;
 			align-self: end;
 			margin-bottom: 2rem;
 			font-weight: bold;
 			background: radial-gradient(circle farthest-corner at bottom right, rgb(255, 180, 0), rgb(170, 120, 0));
 		}
 	}
-
 }
 
 

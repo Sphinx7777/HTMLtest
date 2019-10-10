@@ -1,15 +1,11 @@
 @mixin mediaMax($width,$size) {
 	@media screen and (max-width: $width) {
-		.headerTitleBac {
-			font-size: $size;
-		}
+		font-size: $size;
 	}
 }
 @mixin mediaMin($width,$size) {
-	@media screen and (max-width: $width) {
-		.headerTitleBac {
-			font-size: $size;
-		}
+	@media screen and (min-width: $width) {
+		font-size: $size;
 	}
 }
 
@@ -101,9 +97,12 @@ html, body {
 		font-size: 2vw;
 		font-weight: bold;
 		color: rgba(0, 0, 0, 0.3);
-		@include mediaMax(800px, 2.7vw);
-		@include mediaMax(500px, 3.2vw);
-		@include mediaMin(1200px, 1.8vw);
+		@include mediaMin(1200px,2vw);
+		@include mediaMin(1300px,1.8vw);
+		@include mediaMin(1400px,1.7vw);
+		@include mediaMin(1500px,1.5vw);
+		@include mediaMin(1600px,1.3vw);
+
 	}
 
 
@@ -138,9 +137,11 @@ html, body {
 				margin: 0 auto;
 				font-weight: bold;
 				font-size: 2vw;
-				@include mediaMax(800px, 2.7vw);
-				@include mediaMax(500px, 3.2vw);
-				@include mediaMin(1200px, 1.8vw);
+			@include mediaMin(1200px,2vw);
+			@include mediaMin(1300px,1.8vw);
+			@include mediaMin(1400px,1.7vw);
+			@include mediaMin(1500px,1.5vw);
+			@include mediaMin(1600px,1.3vw);
 
 			}
 

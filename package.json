@@ -2,7 +2,7 @@
 	"name": "my-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://Sphinx7777.github.io/Test",
+	"homepage": "https://Sphinx7777.github.io/HTMLtest",
 	"dependencies": {
 		"@material-ui/core": "^4.4.0",
 		"@material-ui/icons": "^4.2.1",
