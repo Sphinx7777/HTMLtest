@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/HTMLtest/static/css/main.c3ffcf10.chunk.css",
-    "main.js": "/HTMLtest/static/js/main.dc9c5afb.chunk.js",
-    "main.js.map": "/HTMLtest/static/js/main.dc9c5afb.chunk.js.map",
+    "main.css": "/HTMLtest/static/css/main.686843a4.chunk.css",
+    "main.js": "/HTMLtest/static/js/main.43ef7811.chunk.js",
+    "main.js.map": "/HTMLtest/static/js/main.43ef7811.chunk.js.map",
     "runtime~main.js": "/HTMLtest/static/js/runtime~main.881ac107.js",
     "runtime~main.js.map": "/HTMLtest/static/js/runtime~main.881ac107.js.map",
-    "static/js/2.cbcdef57.chunk.js": "/HTMLtest/static/js/2.cbcdef57.chunk.js",
-    "static/js/2.cbcdef57.chunk.js.map": "/HTMLtest/static/js/2.cbcdef57.chunk.js.map",
+    "static/js/2.7aa2452e.chunk.js": "/HTMLtest/static/js/2.7aa2452e.chunk.js",
+    "static/js/2.7aa2452e.chunk.js.map": "/HTMLtest/static/js/2.7aa2452e.chunk.js.map",
     "index.html": "/HTMLtest/index.html",
-    "precache-manifest.709b367e5aeb6e821ca3626011772d07.js": "/HTMLtest/precache-manifest.709b367e5aeb6e821ca3626011772d07.js",
+    "precache-manifest.7b8acd03f9ada00e4ab695c49a46d6a5.js": "/HTMLtest/precache-manifest.7b8acd03f9ada00e4ab695c49a46d6a5.js",
     "service-worker.js": "/HTMLtest/service-worker.js",
-    "static/css/main.c3ffcf10.chunk.css.map": "/HTMLtest/static/css/main.c3ffcf10.chunk.css.map",
-    "static/media/facebook.ico": "/HTMLtest/static/media/facebook.d5877d2c.ico",
-    "static/media/instagram.ico": "/HTMLtest/static/media/instagram.5cd1f9dc.ico",
-    "static/media/lamp.ico": "/HTMLtest/static/media/lamp.b4166a32.ico",
-    "static/media/linkedin.ico": "/HTMLtest/static/media/linkedin.80c30464.ico",
-    "static/media/telegram.ico": "/HTMLtest/static/media/telegram.5e18d520.ico",
-    "static/media/twitter.ico": "/HTMLtest/static/media/twitter.0923082e.ico",
-    "static/media/youtube.ico": "/HTMLtest/static/media/youtube.eabd61a7.ico"
+    "static/css/main.686843a4.chunk.css.map": "/HTMLtest/static/css/main.686843a4.chunk.css.map",
+    "static/media/form_Bac.png": "/HTMLtest/static/media/form_Bac.89157340.png"
   }
 }
