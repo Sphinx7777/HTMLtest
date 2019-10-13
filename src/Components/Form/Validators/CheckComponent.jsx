@@ -1,16 +1,17 @@
+export const emptyField = value =>
+	value && value.length >= 1 ? undefined : 'Required field';
 
 
-export const emptyField =(value) => {
-	if(value && value.length>=1) return undefined;
-	return 'Required field'
-};
+export const maxLengthCreator = maxLength => values =>
+	values && values.length > maxLength ? `Max ${maxLength} symbols` :
+		undefined;
 
-export const maxLengthCreator=(maxLength) =>(values) => {
-	if(values && values.length>maxLength) return `Max ${maxLength} symbols`;
-	return undefined;
-};
+export const minLengthCreator = minLength => values =>
+	values && values.length < minLength ? `Minimum ${minLength} symbols` :
+		undefined;
 
-export const minLengthCreator=(minLength) =>(values) => {
-	if(values && values.length<minLength) return `Minimum ${minLength} symbols`;
-	return undefined;
-};
+
+export const email = value =>
+	value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+		? 'Invalid email address'
+		: undefined;

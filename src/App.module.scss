@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap&subset=cyrillic');
+@mixin fontSizeForWidth($width,$size) {
+	@media screen and (max-width: $width) {
+		font-size: $size;
+	}
+}
 html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
-	@media screen and (max-width: 500px) {
-		font-size: 80%;
-	}
-
+	font-size: 100%;
+	@include fontSizeForWidth(900px,95%);
+	@include fontSizeForWidth(850px,93%);
+	@include fontSizeForWidth(800px,90%);
+	@include fontSizeForWidth(750px,87%);
+	@include fontSizeForWidth(700px,85%);
+	@include fontSizeForWidth(65px,83%);
+	@include fontSizeForWidth(600px,80%);
+	@include fontSizeForWidth(550px,78%);
 }
 
 .formWrapper {
 	position: relative;
 	max-width: 1114px;
 	margin: 0 auto;
-	background:url('./../src/icons/form_Bac.png');
+	background: url('./../src/icons/form_Bac.png');
 	background-size: 100%;
-
 
 	.form_Bac {
 		max-width: 100%;
@@ -32,11 +41,12 @@ html, body {
 		background-color: rgb(245, 245, 245);
 		border-top-left-radius: 0.6rem;
 		border-top-right-radius: 0.6rem;
-
 		outline: none;
+
 		.formHeader {
 			height: 20.23%;
 			outline: none;
+
 			.compose {
 				width: 100%;
 			}
@@ -48,9 +58,9 @@ html, body {
 			right: 0;
 			bottom: 0;
 			top: 20.23%;
-      display: flex;
+			display: flex;
 			height: 79.77%;
-			border: 1px solid rgb(206,206,206);
+			border: 1px solid rgb(206, 206, 206);
 			border-top: none;
 			border-bottom-left-radius: 0.6rem;
 			border-bottom-right-radius: 0.6rem;
@@ -83,11 +93,57 @@ html, body {
 				.register {
 					color: rgba(103, 103, 103, 0.8);
 					text-align: left;
-           padding-left: 5%;
-					margin: 3.5% 0 5% 0;
-
-					font-size: 1.8vw;
+					padding-left: 5%;
+					margin: 3.6% 0 5% 0;
+				  font-size: 1.2em;
 					font-family: 'Source Sans Pro SemiBold', sans-serif;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.form {
+			top: 0;
+			bottom:0;
+			height: 99.7%;
+
+			.formHeader {
+				max-height: 10%;
+				outline: none;
+
+				.compose {
+					width: 100%;
+				}
+			}
+
+			.formContent {
+				flex-direction: column;
+        top: 0;
+				height: 100%;
+
+				.formContentLeft {
+					display: block;
+					top: 10%;
+					left: 0;
+					right: 0;
+					bottom: 40%;
+					width: 100%;
+
+					.or {
+						padding: 1% 0 1% 10%;
+						max-width: 80%;
+						max-height: 8%;
+						text-align: center;
+					}
+				}
+
+				.formContentRight {
+					display: block;
+					top: 45%;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					width: 100%;
 				}
 			}
 		}

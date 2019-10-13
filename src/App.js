@@ -6,6 +6,11 @@ import compose from "./icons/compose.png";
 import form_Bac from "./icons/form_Bac.png";
 import or from "./icons/or.png";
 
+const disableBtnSend = ms => new Promise(resolve => setTimeout(resolve, ms));
+/*return disableBtnSend(5000).then(() => {
+	return true;
+});*/
+
 
 export const App = () => {
 
@@ -15,12 +20,14 @@ export const App = () => {
 	console.log(regData);
 
 	const onSubmit = (data) => {
-		setLogData(data)
+		setLogData(data);
+		return disableBtnSend(5000).then(() => {
+			return true;
+		})
 	};
 	const submitRegData = (data) => {
 		setRegData(data)
 	};
-
 
 	return (
 		<>
