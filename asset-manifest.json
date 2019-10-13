@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/HTMLtest/static/css/main.686843a4.chunk.css",
+    "main.css": "/HTMLtest/static/css/main.731e9eea.chunk.css",
     "main.js": "/HTMLtest/static/js/main.43ef7811.chunk.js",
     "main.js.map": "/HTMLtest/static/js/main.43ef7811.chunk.js.map",
     "runtime~main.js": "/HTMLtest/static/js/runtime~main.881ac107.js",
@@ -8,9 +8,9 @@
     "static/js/2.7aa2452e.chunk.js": "/HTMLtest/static/js/2.7aa2452e.chunk.js",
     "static/js/2.7aa2452e.chunk.js.map": "/HTMLtest/static/js/2.7aa2452e.chunk.js.map",
     "index.html": "/HTMLtest/index.html",
-    "precache-manifest.7b8acd03f9ada00e4ab695c49a46d6a5.js": "/HTMLtest/precache-manifest.7b8acd03f9ada00e4ab695c49a46d6a5.js",
+    "precache-manifest.20cbbfb5a462a61cd96deb32dbc22c79.js": "/HTMLtest/precache-manifest.20cbbfb5a462a61cd96deb32dbc22c79.js",
     "service-worker.js": "/HTMLtest/service-worker.js",
-    "static/css/main.686843a4.chunk.css.map": "/HTMLtest/static/css/main.686843a4.chunk.css.map",
+    "static/css/main.731e9eea.chunk.css.map": "/HTMLtest/static/css/main.731e9eea.chunk.css.map",
     "static/media/form_Bac.png": "/HTMLtest/static/media/form_Bac.89157340.png"
   }
 }
