@@ -26,7 +26,10 @@ export const App = () => {
 		})
 	};
 	const submitRegData = (data) => {
-		setRegData(data)
+		setRegData(data);
+		return disableBtnSend(5000).then(() => {
+			return true;
+		})
 	};
 
 	return (

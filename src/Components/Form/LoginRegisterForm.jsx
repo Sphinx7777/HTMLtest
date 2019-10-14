@@ -9,7 +9,7 @@ const maxlength50 = maxLengthCreator(50);
 const minlength4 = minLengthCreator(4);
 
 
-const LoginRegisterForm = ({handleSubmit, submitting, submitRegData}) => {
+const LoginRegisterForm = ({handleSubmit, submitting, submitRegData,pristine,reset}) => {
 
 	return (
 		<div className={s.login}>
@@ -51,7 +51,7 @@ const LoginRegisterForm = ({handleSubmit, submitting, submitRegData}) => {
 						validate={[emptyField, minlength4, maxlength30]}
 					/>
 				</div>
-				<button className={s.loginRegisterBtn} type="submit" disabled={submitting}>
+				<button className={s.loginRegisterBtn} type="submit" disabled={pristine || submitting} onClick={()=>setTimeout(reset,0)} >
 					Register
 				</button>
 			</form>
