@@ -35,22 +35,23 @@ export const App = () => {
 	return (
 		<>
 			<div className={s.formWrapper}>
-				<img className={s.form_Bac} src={form_Bac} alt=""/>
-				<div className={s.form}>
-					<div className={s.formHeader}>
-						<img className={s.compose} src={compose} alt=""/>
-					</div>
-					<div className={s.formContent}>
-						<div className={s.formContentLeft}>
-							<img className={s.or} src={or} alt=""/>
-							<LoginForm onSubmit={onSubmit}/>
+				<img src={form_Bac} className={s.formBac} alt=""/>
+					<div className={s.form}>
+						<div className={s.formHeader}>
+							<img className={s.compose} src={compose} alt=""/>
 						</div>
-						<div className={s.formContentRight}>
-							<div className={s.register}>Register</div>
-							<LoginRegisterForm submitRegData={submitRegData}/>
+						<div className={s.formContent}>
+							<div className={s.formContentLeft}>
+								<img className={s.or} src={or} alt=""/>
+								<LoginForm onSubmit={onSubmit}/>
+							</div>
+							<div className={s.formContentRight}>
+								<div className={s.register}>Register</div>
+								<LoginRegisterForm submitRegData={submitRegData}/>
+							</div>
 						</div>
 					</div>
-				</div>
+
 			</div>
 		</>
 	);

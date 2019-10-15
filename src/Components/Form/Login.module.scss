@@ -9,6 +9,11 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 	text-align: left;
 	font-family: 'Source Sans Pro', sans-serif;
 }
+@mixin positionForWidth($width,$top,$left) {
+	@media screen and (max-width: $width) {
+		top: $top;
+		right: $left;
+	}}
 
 @mixin bRadius($br) {
 	border-radius: $br;
@@ -78,6 +83,10 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 			&:focus {
 				border: 1px solid lightblue;
 			}
+			@media screen and (max-width: 500px) {
+				padding: 4% 7% 4% 9%;
+				width: 70%;
+			}
 		}
 
 		.logNameError {
@@ -97,13 +106,14 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 				@include bRadius(0.5rem);
 				opacity: 0;
 				transition: opacity 700ms;
+				@include positionForWidth(500px,8%,6%)
 			}
 
 			.warning {
 				position: absolute;
 				padding: 2%;
-				top: 21.5%;
-				left: 90%;
+				top: 20.5%;
+				left: 87%;
 				width: 0.3em;
 			}
 
@@ -120,11 +130,12 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 				top: 33.5%;
 				right: 5%;
 				bottom:66%;
+				@include positionForWidth(500px,31%,6%)
 			}
 
 			.warning {
-				top: 43%;
-				left: 90%;
+				top: 42%;
+				left: 87%;
 			}
 
 			.warning:hover ~ .error {
@@ -144,11 +155,12 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 				top: 35.5%;
 				right: 5%;
 				bottom:66%;
+				@include positionForWidth(500px,34%,6%)
 			}
 
 			.warning {
-				top: 46%;
-				left: 90%;
+				top: 45%;
+				left: 87%;
 			}
 		}
 
@@ -159,11 +171,12 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 				top: 58.5%;
 				right: 5%;
 				bottom:36%;
+				@include positionForWidth(500px,57%,6%)
 			}
 
 			.warning {
-				top: 68.5%;
-				left: 90%;
+				top: 67.5%;
+				left: 87%;
 			}
 		}
 
@@ -250,12 +263,16 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 			top: 64.5%;
 		}
 		@media screen and (max-width: 650px) {
-			bottom: 29.5%;
-			top: 63.5%;
+		bottom: 29.5%;
+		top: 63.5%;
+	}
+		@media screen and (max-width: 500px) {
+			bottom: 25.5%;
+			top: 67.5%;
 		}
 		@media screen and (max-width: 450px) {
-			bottom: 30%;
-			top: 63%;
+			bottom: 23.5%;
+			top: 69.5%;
 		}
 
 
@@ -297,11 +314,13 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 			opacity: 0;
 			transition: opacity 700ms;
 			left: -20%;
+			z-index: -5;
 		}
 	}
 
 	.check:hover .longer_enter_password {
 		opacity: 100;
+		z-index: 5;
 		transition: opacity 700ms;
 	}
 
@@ -323,7 +342,7 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 		border: none;
 		background: linear-gradient( to right bottom, rgb(170,120,0) 30%, rgb(255,180,0) 70%);
 		@media screen and (max-width: 500px) {
-			width: 30%;
+			width: 27%;
 			left: 67%;
 			right: 10%;
 		}
@@ -341,7 +360,7 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 	top: 63%;
 	left: 59%;
 	right: 10%;
-	bottom: 33%;
+	bottom: 30%;
 	width: 37.536%;
 	height: 10%;
 	color: rgb(255, 255, 255);
@@ -353,7 +372,8 @@ $placeholderColorError: rgba(255, 0, 0, 0.3);
 	border: none;
 	background: linear-gradient( to right bottom, rgb(0,76,108) 30%, rgb(79,182,226) 70%);
 	@media screen and (max-width: 500px) {
-		width: 30%;
+		width: 27%;
+		top: 70%;
 		left: 66%;
 	}
 	&:hover {

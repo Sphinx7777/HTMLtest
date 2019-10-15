@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap&subset=cyrillic');
 @mixin fontSizeForWidth($width,$size) {
 	@media screen and (max-width: $width) {
-		font-size: $size;
-	}
-}
+	font-size: $size;
+  }}
+
 html, body {
+	background-color: rgb(245, 245, 245);
 	margin: 0;
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -20,28 +21,30 @@ html, body {
 }
 
 .formWrapper {
-	position: relative;
-	max-width: 1114px;
+  max-width: 1114px;
+	max-height: 1290px;
 	margin: 0 auto;
-	background: url('./../src/icons/form_Bac.png');
-	background-size: 100%;
+	position: relative;
 
-	.form_Bac {
-		max-width: 100%;
+
+	.formBac {
+		width: 100%;
+		height: 100%;
+
 	}
 
 	.form {
-		position: absolute;
-		width: 74.017%;
-		height: 46.899%;
 		z-index: 2;
+		position: absolute;
 		top: 31.0077%;
 		bottom: 22.093%;
 		left: 14.672%;
+		right: 11.16%;
 		background-color: rgb(245, 245, 245);
 		border-top-left-radius: 0.6rem;
 		border-top-right-radius: 0.6rem;
 		outline: none;
+
 
 		.formHeader {
 			height: 20.23%;
@@ -104,13 +107,13 @@ html, body {
 }
 	@media screen and (max-width: 500px) {
 		.formWrapper {
-height: 1290px;
-			.form_Bac {
-
-			}
+margin-top: 15vh;
+			margin-bottom: 15vh;
 			.form {
-top:10%;
-
+				top: 0;
+				bottom: 0;
+				left: 14.672%;
+				right: 11.16%;
 				.formHeader {
 					max-height: 10%;
 					outline: none;
@@ -123,15 +126,17 @@ top:10%;
 				.formContent {
 					flex-direction: column;
 					top: 0;
+					bottom: 0;
 					height: 100%;
 
 					.formContentLeft {
 						display: block;
-						top: 10%;
+						top: 12%;
 						left: 0;
 						right: 0;
-						bottom: 40%;
+						bottom: 45%;
 						width: 100%;
+
 
 						.or {
 							padding: 1% 0 1% 10%;
