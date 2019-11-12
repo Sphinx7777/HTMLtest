@@ -9,23 +9,32 @@ const maxlength30 = maxLengthCreator(30);
 const minlength4 = minLengthCreator(4);
 
 
-const LoginForm = ({handleSubmit, submitting, reset, pristine }) => {
+const LoginForm = (
+	{handleSubmit,
+		submitting,
+		reset,
+		pristine,
+		setLogData
+	}) => {
+
+	const enterSubmit = (event) => {
+		if (event.key === 'Enter') {
+			handleSubmit();
+		}
+	};
 
 	return (
 		<div className={s.login}>
-			<form onSubmit={handleSubmit} onKeyPress={(event) => {
-				if (event.key === 'Enter') {
-					handleSubmit()
-				}
-			}}>
+			<form onSubmit={handleSubmit}
+						onKeyPress={enterSubmit}>
 				<div className={s.loginName}>
 					<Field
 						name="name"
-						className={s.logNameError}
 						type="text"
-						component={InputComponent}
 						placeholder='User Name'
 						maxLength='31'
+						className={s.logNameError}
+						component={InputComponent}
 						validate={[emptyField, maxlength30]}
 					/>
 				</div>
@@ -33,10 +42,10 @@ const LoginForm = ({handleSubmit, submitting, reset, pristine }) => {
 					<Field
 						name="password"
 						type="password"
-						className={s.logPassError}
-						component={InputComponent}
 						placeholder='Password'
 						maxLength='31'
+						className={s.logPassError}
+						component={InputComponent}
 						validate={[emptyField, minlength4, maxlength30]}
 					/>
 				</div>
@@ -45,13 +54,19 @@ const LoginForm = ({handleSubmit, submitting, reset, pristine }) => {
 						<Field
 							name="rememberMe"
 							type="checkbox"
-							component={InputComponent}
 							child='Remember My password'
+							component={InputComponent}
 						/>
-						<img className={s.longer_enter_password} src={longer_enter_password} alt=""/>
+						<img className={s.longer_enter_password}
+								 src={longer_enter_password}
+								 alt=""
+						/>
 					</div>
 				</div>
-				<button className={s.loginBtn} type="submit" disabled={pristine || submitting} onClick={()=>setTimeout(reset,0)}>
+				<button className={s.loginBtn}
+								type="submit"
+								disabled={pristine || submitting}
+					/*onClick={()=>setTimeout(reset,0)}*/>
 					Login
 				</button>
 			</form>

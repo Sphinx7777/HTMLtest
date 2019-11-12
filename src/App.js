@@ -7,9 +7,6 @@ import form_Bac from "./icons/form_Bac.png";
 import or from "./icons/or.png";
 
 const disableBtnSend = ms => new Promise(resolve => setTimeout(resolve, ms));
-/*return disableBtnSend(5000).then(() => {
-	return true;
-});*/
 
 
 export const App = () => {
@@ -35,23 +32,33 @@ export const App = () => {
 	return (
 		<>
 			<div className={s.formWrapper}>
-				<img src={form_Bac} className={s.formBac} alt=""/>
-					<div className={s.form}>
-						<div className={s.formHeader}>
-							<img className={s.compose} src={compose} alt=""/>
+				<img className={s.formBac}
+						 src={form_Bac}
+						 alt=""
+				/>
+				<div className={s.form}>
+					<div className={s.formHeader}>
+						<img className={s.compose}
+								 src={compose}
+								 alt=""
+						/>
+					</div>
+					<div className={s.formContent}>
+						<div className={s.formContentLeft}>
+							<img
+								src={or}
+								alt=""
+							/>
+							<LoginForm {...{onSubmit,setLogData}} />
 						</div>
-						<div className={s.formContent}>
-							<div className={s.formContentLeft}>
-								<img className={s.or} src={or} alt=""/>
-								<LoginForm onSubmit={onSubmit}/>
+						<div className={s.formContentRight}>
+							<div className={s.register}>
+								Register
 							</div>
-							<div className={s.formContentRight}>
-								<div className={s.register}>Register</div>
-								<LoginRegisterForm submitRegData={submitRegData}/>
-							</div>
+							<LoginRegisterForm {...{submitRegData,setRegData}} />
 						</div>
 					</div>
-
+				</div>
 			</div>
 		</>
 	);
